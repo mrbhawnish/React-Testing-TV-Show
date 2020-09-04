@@ -11,7 +11,7 @@ jest.mock("./api/fetchShow")
 test("Component fetches API data and renders it", async () => {
    
     mockFetchShow.mockResolvedValueOnce(showData)
-    const { getByTestId, findByTestId, queryByText, findByText, getByText} = render(<App />);
+    const { getByTestId, getByText} = render(<App />);
    
    await getByText(/fetching data.../i)
   
